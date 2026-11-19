@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import homeIcon from "../assets/images/home_icon.png";
+import homeIcon from "../assets/backgroundImages/home_icon.png";
 export default function Header(): ReactElement
 {
     return(
