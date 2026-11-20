@@ -5,6 +5,6 @@ export default function Weather()
         <div className="weather-container">
              <img src={sunny} alt="Sunny weather" />
         </div>
-
+        
     )
 }
