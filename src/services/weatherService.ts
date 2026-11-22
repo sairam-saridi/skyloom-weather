@@ -46,12 +46,13 @@ export async function getWeatherByCity(
     }
 
     // Convert weather code into readable condition
+    
     let condition = "Unknown";
 
     const code = current.weather_code;
 
     if (code === 0) condition = "Clear Sky";
-    else if ([1, 2, 3].includes(code)) condition = "Partly Cloudy";
+    else if ([1, 2, 3].includes(code)) condition = "Cloudy";
     else if ([45, 48].includes(code)) condition = "Foggy";
     else if ([51, 53, 55, 56, 57].includes(code)) condition = "Drizzle";
     else if ([61, 63, 65, 66, 67].includes(code)) condition = "Rainy";
@@ -59,6 +60,7 @@ export async function getWeatherByCity(
     else if ([80, 81, 82].includes(code)) condition = "Rain Showers";
     else if ([85, 86].includes(code)) condition = "Snow Showers";
     else if ([95, 96, 99].includes(code)) condition = "Thunderstorm";
+
 
     return {
         temperature: current.temperature_2m,
